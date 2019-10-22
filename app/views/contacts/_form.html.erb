@@ -8,7 +8,17 @@
     <%= f.input :birthday %>
   </div>
 
+  <div>
+    <%= f.simple_fields_for :phones do |builder| %>
+      <%= render "phone_fields", f: builder %>
+    <% end %>
+    <p><%= link_to_add_fields "Add Phone", f, :phones %></p>
+  </div>
+  
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
 <% end %>
+
+
+

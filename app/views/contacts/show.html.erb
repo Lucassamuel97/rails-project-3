@@ -2,14 +2,26 @@
 
 <table class="table table-striped table-hover">
 
- <tr>
-   <th scope="row"><%= t('contact.name') %>:</th>
-   <td><%= @contact.name %></td>
- </tr>
- <tr>
-   <th scope="row"><%= t('contact.birthday') %>:</th>
-   <td><%= @contact.birthday %></td>
- </tr>
+  <tr>
+    <th scope="row"><%= t('contact.name') %>:</th>
+    <td><%= @contact.name %></td>
+  </tr>
+  <tr>
+    <th scope="row"><%= t('contact.birthday') %>:</th>
+    <td><%= @contact.birthday %></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <p>
+        <strong>Phones</strong>
+        <% @contact.phones.each do |phone| %>
+        <p>
+          <%= phone.number %>
+        </p>
+        <% end %>
+      </p>
+    </td>
+  <tr>
 
 </table>
 

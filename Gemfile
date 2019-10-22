@@ -66,3 +66,5 @@ gem 'mini_racer', '~> 0.2.6'
 gem 'bootstrap', '~> 4.3.1'
 
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
+
+gem 'jquery-rails'
