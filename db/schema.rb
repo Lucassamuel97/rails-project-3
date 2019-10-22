@@ -10,13 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_14_224122) do
+ActiveRecord::Schema.define(version: 2019_10_22_001341) do
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.date "birthday"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "items", force: :cascade do |t|
     t.string "description"
     t.boolean "done"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "phones", force: :cascade do |t|
+    t.string "number"
+    t.string "segment_phone"
+    t.boolean "default"
+    t.integer "contact_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_phones_on_contact_id"
   end
 
 end
