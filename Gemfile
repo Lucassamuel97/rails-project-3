@@ -68,3 +68,5 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
 
 gem 'jquery-rails'
+
+gem 'rails-i18n', '~> 5.1', '>= 5.1.3'
