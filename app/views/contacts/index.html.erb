@@ -41,6 +41,7 @@
   </tbody>
 </table>
 
+  <%= will_paginate @contacts, renderer: BootstrapPagination::Rails %>
 <br>
 
 <%= link_to t('new', name: t('contact.title', count: 1)), new_contact_path,
