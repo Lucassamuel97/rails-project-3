@@ -16,6 +16,8 @@
         <%= link_to 'Any link', '#', class: 'nav-item nav-link' %>
       </div>
     </div>
+    <%= link_to 'pt-BR', root_path(locale: 'pt-BR'), class: 'nav-item nav-link' %>
+    <%= link_to 'en', root_path(locale: 'en'), class: 'nav-item nav-link' %>
   </nav>
   <main class="container mt-5" role="main">
     <% flash.each do |key, value| %>
